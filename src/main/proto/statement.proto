@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.itau.adapters.grpc";
+//option java_outer_classname = "LojaCarto";
+//option objc_class_prefix = "HLW";
+
+package com.itau.adapters.grpc;
+
+service CommandRequestAccountStatementService {
+  rpc SendCommandRequestAccountStatement (CommandRequestAccountStatementRequest) returns (CommandRequestAccountStatementResponse) {}
+}
+
+message CommandRequestAccountStatementRequest {
+  int32 response = 1;
+  int32 accountId = 2;
+}
+
+message CommandRequestAccountStatementResponse {
+  string response = 1;
+  repeated StatementRequest statement = 2;
+}
+
+message StatementRequest {
+  int32 sourcePersonId = 1;
+  int32 sourceAccountId = 2;
+  int32 destinationPersonId = 3;
+  int32 destinationAccountId = 4;
+  double transferValue = 5;
+  string date = 6;
+  string status = 7;
+
+}
