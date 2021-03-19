@@ -3,20 +3,21 @@
   "name": "AccountStatement",
   "namespace": "com.itau.avro",
   "fields": [
-    {"name": "statement",
-     "type": {
-       "type": "array",
-       "items": {
-         "name": "Payment",
-         "type": "record",
-         "fields": [
-           {"name": "personId", "type": "int"}
-           {"name": "accountId", "type": "int"}
-           {"name": "date", "type": "string"}
-           {"name": "value", "type": "double"}
-           {"name": "status", "type": "string"}
-         ]
+      {"name": "statement",
+       "type": {
+         "type": "array",
+         "items": {
+           "name": "Payment",
+           "type": "record",
+           "fields": [
+             {"name": "personId", "type": "int"},
+             {"name": "accountId", "type": "int"},
+             {"name": "date", "type": "string"},
+             {"name": "value", "type": "double"},
+             {"name": "status", "type": "string"}
+           ]
+         }
        }
-     }
-  }
+    }
+  ]
 }

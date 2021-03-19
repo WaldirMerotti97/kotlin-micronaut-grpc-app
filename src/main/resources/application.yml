@@ -10,29 +10,29 @@ micronaut:
   server:
     port: ${MICRONAUT_SERVER_PORT:`10020`}
 
-datasources:
-  default:
-    url: jdbc:postgresql://localhost:5432/postgres
-    driverClassName: org.postgresql.Driver
-    username: postgres
-    password: ''
-
-tracing:
-  jaeger:
-    enabled: ${JEAGER_ENABLE:`true`}
-    sender:
-      agentHost: ${JEAGER_AGENT_HOST`localhost`}
-      agentPort: ${JEAGER_AGENT_PORT:`6831`}
-    sampler:
-      probability: 0.1
-
-redis:
-  uri: ${REDIS_URI:`redis://localhost:6379`}
-  caches:
-    statement-cache:
-      #expire one hour after write
-      expire-after-write: 1h
-      value-serializer: io.micronaut.jackson.serialize.JacksonObjectSerializer
+#datasources:
+#  default:
+#    url: jdbc:postgresql://localhost:5432/postgres
+#    driverClassName: org.postgresql.Driver
+#    username: postgres
+#    password: ''
+#
+#tracing:
+#  jaeger:
+#    enabled: ${JEAGER_ENABLE:`true`}
+#    sender:
+#      agentHost: ${JEAGER_AGENT_HOST`localhost`}
+#      agentPort: ${JEAGER_AGENT_PORT:`6831`}
+#    sampler:
+#      probability: 0.1
+#
+#redis:
+#  uri: ${REDIS_URI:`redis://localhost:6379`}
+#  caches:
+#    statement-cache:
+#      #expire one hour after write
+#      expire-after-write: 1h
+#      value-serializer: io.micronaut.jackson.serialize.JacksonObjectSerializer
 
 kafka:
   enable:
@@ -82,11 +82,11 @@ kafka:
     default:
       retries: 5
 
-kaas:
-  cert:
-    client:
-      user: ${KAAS_CERT_CLIENT_USER:CPS655U}
-      password: ${KAAS_CERT_CLIENT_PASS:orangestack@ey5}
-    environment: ${KAAS_CERT_ENV:SANDBOX}
+#kaas:
+#  cert:
+#    client:
+#      user: ${KAAS_CERT_CLIENT_USER:CPS655U}
+#      password: ${KAAS_CERT_CLIENT_PASS:orangestack@ey5}
+#    environment: ${KAAS_CERT_ENV:SANDBOX}
 
 

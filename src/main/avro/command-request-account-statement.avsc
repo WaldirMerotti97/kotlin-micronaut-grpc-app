@@ -3,7 +3,7 @@
   "name": "CommandRequestAccountStatement",
   "namespace": "com.itau.avro",
   "fields": [
-    {"name": "personId", "type": "int"}
+    {"name": "personId", "type": "int"},
     {"name": "accountId", "type": "int"}
   ]
 }

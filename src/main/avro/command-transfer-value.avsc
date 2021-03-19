@@ -3,11 +3,10 @@
   "name": "CommandTransferValue",
   "namespace": "com.itau.avro",
   "fields": [
-    {"name": "sourcePersonId", "type": "long"}
-    {"name": "sourceAccountId", "type": "long"}
-    {"name": "destinationPersonId", "type": "long"}
-    {"name": "destinationAccountId", "type": "long"}
+    {"name": "sourcePersonId", "type": "long"},
+    {"name": "sourceAccountId", "type": "long"},
+    {"name": "destinationPersonId", "type": "long"},
+    {"name": "destinationAccountId", "type": "long"},
     {"name": "transferValue", "type": "float"}
   ]
-
 }

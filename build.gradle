@@ -8,7 +8,7 @@ plugins {
     id "io.micronaut.application" version "1.4.2"
     id "com.google.protobuf" version "0.8.13"
     id "com.commercehub.gradle.plugin.avro-base" version "0.9.1"
-    id "jacoco"
+//    id "jacoco"
 //    id "info.solidsoft.pitest" version '1.6.0'
 }
 
@@ -29,6 +29,8 @@ micronaut {
 }
 
 dependencies {
+    api("io.grpc:grpc-kotlin-stub:1.0.0")
+    implementation("io.grpc:protoc-gen-grpc-kotlin:1.0.0")
     implementation("io.micronaut:micronaut-runtime")
     implementation("io.micronaut.grpc:micronaut-grpc-runtime")
     implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
@@ -36,23 +38,24 @@ dependencies {
     implementation("javax.annotation:javax.annotation-api")
     implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
-    implementation("io.micronaut.redis:micronaut-redis-lettuce")
+//    implementation("io.micronaut.redis:micronaut-redis-lettuce")
     implementation("io.micronaut.kafka:micronaut-kafka")
     implementation("io.micronaut.kafka:micronaut-kafka-streams")
     implementation("io.micronaut:micronaut-validation")
-    implementation("io.micronaut:micronaut-tracing")
-    implementation("io.micronaut.cache:micronaut-cache-noop")
-    runtimeOnly("io.jaegertracing:jaeger-thrift")
-    runtimeOnly("ch.qos.logback:logback-classic")
-    runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
-    runtimeOnly("org.postgresql:postgresql")
-    testImplementation("org.testcontainers:junit-jupiter")
-    testImplementation("org.testcontainers:postgresql")
-    testImplementation("org.testcontainers:testcontainers")
-    testImplementation("io.micronaut:micronaut-http-client")
+//    implementation("io.micronaut:micronaut-tracing")
+//    implementation("io.micronaut.cache:micronaut-cache-noop")
+    implementation("org.apache.avro:avro:1.8.1")
+    annotationProcessor("io.micronaut.data:micronaut-data-processor")
+//    runtimeOnly("io.jaegertracing:jaeger-thrift")
+//    runtimeOnly("ch.qos.logback:logback-classic")
+//    runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
+//    runtimeOnly("org.postgresql:postgresql")
+//    testImplementation("org.testcontainers:junit-jupiter")
+//    testImplementation("org.testcontainers:postgresql")
+//    testImplementation("org.testcontainers:testcontainers")
+//    testImplementation("io.micronaut:micronaut-http-client")
 
 }
-
 
 application {
     mainClass.set("com.itau.ApplicationKt")
@@ -101,7 +104,7 @@ protobuf {
             artifact = "io.grpc:protoc-gen-grpc-java:1.33.1"
         }
         grpckt {
-            artifact = "io.grpc:protoc-gen-grpc-kotlin:1.0.0"
+            artifact = "io.grpc:protoc-gen-grpc-kotlin:1.0.0:jdk7@jar"
         }
     }
     generateProtoTasks {

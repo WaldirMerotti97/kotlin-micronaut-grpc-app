@@ -3,7 +3,7 @@
   "name": "TransferredValue",
   "namespace": "com.itau.avro",
   "fields": [
-    {"name": "name", "type": "string"}
+    {"name": "name", "type": "string"},
     {"name": "payment",
       "type": [
         "null",
@@ -11,7 +11,7 @@
           "name": "PaymentResponse",
           "type": "record",
           "fields": [
-            {"name": "id", "type": "long"}
+            {"name": "id", "type": "long"},
             {"name": "idPagamento", "type": "string"}
           ]
         }
