@@ -37,8 +37,8 @@ micronaut:
 kafka:
   enable:
     idempotence: ${KAFKA_ENABLE_IDEMPOTENCE:true}
-  health:
-    enabled: ${KAFKA_HEALTH_ENABLED:false}
+#  health:
+#    enabled: ${KAFKA_HEALTH_ENABLED:true}
   bootstrap:
     servers: S{KAFKA_BOOTSTRAP_SERVERS:`localhost:9092`}
   producers:
@@ -60,7 +60,7 @@ kafka:
         deserializer: br.com.itau.cert.client.serializers.KCertAvroSerializer
     schema:
       registry:
-        url: ${KAFKA_SCHEMA_REGISTRY:`http://localhosy:8081`}
+        url: ${KAFKA_SCHEMA_REGISTRY:`http://localhost:8081`}
     value:
       subject:
         name:

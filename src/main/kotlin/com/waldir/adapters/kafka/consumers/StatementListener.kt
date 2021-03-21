@@ -1,6 +1,6 @@
-package com.itau.adapters.kafka.consumers
+package com.waldir.adapters.kafka.consumers
 
-import com.itau.avro.AccountStatement
+import com.waldir.avro.AccountStatement
 import io.micronaut.configuration.kafka.annotation.*
 import io.micronaut.messaging.Acknowledgement
 
@@ -14,8 +14,6 @@ class StatementListener {
     fun receive(@KafkaKey key: String, statement: AccountStatement?, acknowledgement: Acknowledgement){
 
 
-        acknowledgement.ack()
-        acknowledgement.ack()
         acknowledgement.ack()
     }
 

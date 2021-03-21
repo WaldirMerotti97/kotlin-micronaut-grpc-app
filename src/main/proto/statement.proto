@@ -12,7 +12,7 @@ service CommandRequestAccountStatementService {
 }
 
 message CommandRequestAccountStatementRequest {
-  int32 response = 1;
+  int32 personId = 1;
   int32 accountId = 2;
 }
 

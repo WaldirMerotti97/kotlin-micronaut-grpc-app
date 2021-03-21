@@ -1,6 +1,6 @@
-package com.itau.adapters.kafka.consumers
+package com.waldir.adapters.kafka.consumers
 
-import com.itau.avro.TransferredValue
+import com.waldir.avro.TransferredValue
 import io.micronaut.configuration.kafka.annotation.*
 import io.micronaut.messaging.Acknowledgement
 

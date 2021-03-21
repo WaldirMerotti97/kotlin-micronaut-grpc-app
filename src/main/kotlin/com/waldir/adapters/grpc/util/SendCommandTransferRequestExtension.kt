@@ -1,4 +1,4 @@
-package com.itau.adapters.grpc.util
+package com.waldir.adapters.grpc.util
 
 class SendCommandTransferRequestExtension {
 }

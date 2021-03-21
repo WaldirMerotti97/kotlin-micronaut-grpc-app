@@ -1,4 +1,4 @@
-package com.itau
+package com.waldir
 
 import io.micronaut.runtime.Micronaut.*
 fun main(args: Array<String>) {
